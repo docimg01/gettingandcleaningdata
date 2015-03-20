@@ -22,3 +22,18 @@ This repository contains three files
 - Uses descriptive activity names to name the activities in the data set
 - Appropriately labels the data set with descriptive variable names. 
 - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+The steps used by R script to accomplish above are as follows :
+-Getting data using download.file()
+- setting appropriate working directory using setwd()
+- unzipping the downloaded file
+- using list.files() to get name of the unzipped file
+- reading files using read.table()
+- Merging all training data with cbind
+- Merging all test data with cbind
+- Merging training and test data with rbind
+- Assigning lables using names()
+- Extracting only the measurements on the mean and standard deviation for each measurements using 'grepl'
+- Loading plyr package to use 'join'
+- Labelling  the data set with descriptive variable names using 'gsub'
+- Creating  a second,independent tidy data set (avgbyact.txt) and output it using write.table()
